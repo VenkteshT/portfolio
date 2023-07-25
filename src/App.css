@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:wght@200;300;400;500;600&family=Rubik:wght@400;500;700&display=swap");
+
+:root {
+  --bg-black-900: #f2f2fc;
+  --bg-black-100: #fdf9ff;
+  --bg-black-50: #e8dfec;
+  --text-black-900: #302e4d;
+  --text-black-700: #504e70;
+
+  /* skins */
+  --skin-color: #ec1839;
+}
+
+.App {
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
+  line-height: 1.5;
+  font-size: 16px;
+  width: 100%;
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+.pad-15 {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.shadow-dark {
+  box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+}

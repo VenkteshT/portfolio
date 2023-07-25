@@ -1,0 +1,54 @@
+.timeline-item {
+  position: relative;
+  padding-left: 37px;
+  padding-bottom: 20px;
+}
+
+.timeline-item:last-child {
+  padding-bottom: 0px;
+}
+
+.timeline-item::before {
+  content: "";
+  width: 1px;
+  position: absolute;
+  height: 100%;
+  left: 7px;
+  background-color: var(--skin-color);
+}
+
+.timeline .circle-dot {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: var(--skin-color);
+}
+
+.timeline .timeline-date {
+  font-weight: 400;
+  font-size: 14px;
+  margin-bottom: 12px;
+  color: var(--text-black-700);
+}
+
+.timeline .timeline-date svg {
+  margin-right: 5px;
+}
+
+.timeline .timeline-title {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 15px;
+  text-transform: capitalize;
+  color: var(--text-black-900);
+}
+
+.timeline .timeline-text {
+  line-height: 25px;
+  font-size: 15px;
+  text-align: justify;
+  color: var(--text-black-700);
+}
