@@ -2,7 +2,23 @@ import React, { useEffect, useState } from "react";
 import "./Portfolio.css";
 import { projects } from "../../mydata";
 import Project_Item from "../../compnents/projectitem/Project_Item";
+import { useDispatch, useSelector } from "react-redux";
+import { actions, stateSelector } from "../../redux/slice";
+//
 export default function Portfolio() {
+  //
+  const dispatch = useDispatch();
+
+  //
+  const {
+    isFullScreen,
+    theme: { theme: curTheme },
+  } = useSelector(stateSelector);
+  //
+  useEffect(() => {
+    dispatch(actions.setPage({ curPage: "portfolio" }));
+  }, []);
+
   //
   const [myProjects, setMyProjects] = useState({
     frontend: [],
@@ -19,15 +35,15 @@ export default function Portfolio() {
   }, [projects]);
   //
   return (
-    <section className="section portfolio">
+    <section className={`${isFullScreen && "full"} section portfolio`}>
       <div className="container">
         <div className="row">
-          <div className="section-title pad-15">
+          <div className={`section-title ${curTheme} pad-15`}>
             <h2>Portfolio</h2>
           </div>
         </div>
         <div className="row">
-          <div className="portfolio-heading pad-15">
+          <div className={`portfolio-heading ${curTheme} pad-15`}>
             <h2>My Last Projects:</h2>
           </div>
         </div>

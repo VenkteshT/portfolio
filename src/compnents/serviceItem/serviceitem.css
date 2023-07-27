@@ -4,6 +4,21 @@
   max-width: 33.32%;
 }
 
+@media (max-width: 980px) {
+  .service-item {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 750px) {
+  .service-item {
+    flex: 0 0 80%;
+    max-width: 80%;
+    margin: 30px auto;
+  }
+}
+
 .service-item .service-item-inner {
   background-color: var(--bg-black-100);
   border: 1px solid var(--bg-black-50);
@@ -40,7 +55,7 @@
 
 .service-item .service-item-inner:hover .icon svg {
   font-size: 25px;
-  color: #fff;
+  color: #fff !important;
 }
 
 .service-item .service-item-inner h4 {
@@ -55,4 +70,43 @@
   font-size: 16px;
   color: var(--text-black-700);
   line-height: 25px;
+}
+
+/* theme-1  */
+
+.service-item-inner.color-1:hover .icon {
+  background-color: var(--color-1) !important;
+}
+
+.service-item-inner.color-1 .icon svg {
+  color: var(--color-1);
+}
+
+/* theme-2 */
+
+.service-item-inner.color-2:hover .icon {
+  background-color: var(--color-2) !important;
+}
+
+.service-item-inner.color-2 .icon svg {
+  color: var(--color-2);
+}
+
+/* theme-3 */
+
+.service-item-inner.color-3:hover .icon {
+  background-color: var(--color-3) !important;
+}
+
+.service-item-inner.color-3 .icon svg {
+  color: var(--color-3);
+}
+/* theme-4 */
+
+.service-item-inner.color-4:hover .icon {
+  background-color: var(--color-4) !important;
+}
+
+.service-item-inner.color-4 .icon svg {
+  color: var(--color-4);
 }

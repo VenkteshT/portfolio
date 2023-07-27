@@ -52,3 +52,39 @@
   text-align: justify;
   color: var(--text-black-700);
 }
+
+/* theme 1 */
+.timeline-item.color-1::before {
+  background-color: var(--color-1) !important;
+}
+
+.circle-dot.color-1 {
+  background-color: var(--color-1) !important;
+}
+
+/* theme 2 */
+.timeline-item.color-2::before {
+  background-color: var(--color-2) !important;
+}
+
+.circle-dot.color-2 {
+  background-color: var(--color-2) !important;
+}
+
+/* theme 3 */
+.timeline-item.color-3::before {
+  background-color: var(--color-3) !important;
+}
+
+.circle-dot.color-3 {
+  background-color: var(--color-3) !important;
+}
+
+/* theme 4 */
+.timeline-item.color-4::before {
+  background-color: var(--color-4) !important;
+}
+
+.circle-dot.color-4 {
+  background-color: var(--color-4) !important;
+}

@@ -9,6 +9,10 @@
 
   /* skins */
   --skin-color: #ec1839;
+  --color-1: #fa5b0f;
+  --color-2: #37b182;
+  --color-3: #1854b4;
+  --color-4: #f021b2;
 }
 
 .App {
@@ -38,4 +42,14 @@
 
 .shadow-dark {
   box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+}
+
+.close {
+  left: -300px !important;
+  display: none;
+  transition: all 0.3s ease;
+}
+
+.full {
+  left: 0 !important;
 }

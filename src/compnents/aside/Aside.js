@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Aside.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
+  faBook,
   faBriefcase,
   faComment,
   faHome,
@@ -9,68 +10,109 @@ import {
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+import { actions, stateSelector } from "../../redux/slice";
+import { useSelector, useDispatch } from "react-redux";
 export default function Aside() {
   //
-  const [activePage, setActive] = useState({
-    home: true,
-    about: false,
-    services: false,
-    portfolio: false,
-    contact: false,
-  });
+  const {
+    page,
+    theme: { theme: curTheme },
+  } = useSelector(stateSelector);
+  const [open, setOpen] = useState(true);
+  //
+  const dispatch = useDispatch();
+  //
+  function handleClick() {
+    setOpen((p) => !p);
+    dispatch(actions.setFullScreen({ val: open }));
+  }
+  //
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      if (!open) return;
+      if (window.innerWidth < 1212) {
+        setOpen(false);
+        dispatch(actions.setFullScreen({ val: true }));
+      } else if (window.innerWidth >= 1212) {
+        setOpen(true);
+        dispatch(actions.setFullScreen({ val: false }));
+      }
+    });
+  }, []);
 
   //
-  function handleClick(page) {
-    setActive({
-      home: false,
-      about: false,
-      services: false,
-      portfolio: false,
-      contact: false,
-      [page]: true,
-    });
+  function handleLinkClick() {
+    if (window.innerWidth >= 1212) return;
+    setOpen(false);
   }
-
+  //
   return (
-    <div className="aside">
-      <div className="logo">
-        <Link to="#">
+    <div className={`${!open && "close"} aside`}>
+      <div className="logo" style={{ marginTop: "30px" }}>
+        <Link to="#" className={`${curTheme}`}>
           <span>N</span>amaste
         </Link>
       </div>
-      <div className="nav-toggler">
-        <span></span>
+      <div className={`nav-toggler`} onClick={handleClick}>
+        <span className={`${curTheme}`}></span>
       </div>
       <ul className="nav">
-        <li onClick={() => handleClick("home")}>
-          <Link to="/" className={`${activePage.home && "active"}`}>
+        <li>
+          <Link
+            to="/"
+            className={`${page.home && "active"} ${curTheme}`}
+            onClick={handleLinkClick}
+          >
             <FontAwesomeIcon icon={faHome} />
             Home
           </Link>
         </li>
-        <li onClick={() => handleClick("about")}>
-          <Link to="/about" className={`${activePage.about && "active"}`}>
+        <li>
+          <Link
+            to="/about"
+            className={`${page.about && "active"} ${curTheme}`}
+            onClick={handleLinkClick}
+          >
             <FontAwesomeIcon icon={faUser} />
             About
           </Link>
         </li>
-        <li onClick={() => handleClick("services")}>
-          <Link to="/services" className={`${activePage.services && "active"}`}>
+        <li>
+          <Link
+            to={"/cirtificates"}
+            className={`${page.cirtificates && "active"} ${curTheme}`}
+            onClick={handleLinkClick}
+          >
+            <FontAwesomeIcon icon={faBook} />
+            Cirtificates
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="/services"
+            className={`${page.services && "active"} ${curTheme}`}
+            onClick={handleLinkClick}
+          >
             <FontAwesomeIcon icon={faList} />
             Services
           </Link>
         </li>
-        <li onClick={() => handleClick("portfolio")}>
+        <li>
           <Link
             to="/portfolio"
-            className={`${activePage.portfolio && "active"}`}
+            className={`${page.portfolio && "active"} ${curTheme}`}
+            onClick={handleLinkClick}
           >
             <FontAwesomeIcon icon={faBriefcase} />
             Portfolio
           </Link>
         </li>
-        <li onClick={() => handleClick("contact")}>
-          <Link to="/contact" className={`${activePage.contact && "active"}`}>
+        <li>
+          <Link
+            to="/contact"
+            className={`${page.contact && "active"} ${curTheme}`}
+            onClick={handleLinkClick}
+          >
             <FontAwesomeIcon icon={faComment} />
             Contact
           </Link>

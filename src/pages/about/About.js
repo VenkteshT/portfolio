@@ -5,12 +5,33 @@ import Info_item from "../../compnents/infoitem/Info_item";
 import Skill_item from "../../compnents/skillitem/Skill_item";
 import { Link } from "react-router-dom";
 import { info, skills, education } from "../../mydata.js";
+import { useDispatch, useSelector } from "react-redux";
+import { actions, stateSelector } from "../../redux/slice";
+
+//
+const Resume = "https://localhost:3000/about/myResume.pdf";
+
 //
 export default function About() {
+  //
+  const {
+    isFullScreen,
+    theme: { theme: curTheme },
+  } = useSelector(stateSelector);
+
+  const dispatch = useDispatch();
   //
   const [myInfo, setMyInfo] = useState([]);
   const [mySkills, setMySkills] = useState([]);
   const [myEducation, setMyEducation] = useState(education);
+  const [rednered, setRendered] = useState(false);
+
+  useEffect(() => {
+    dispatch(actions.setPage({ curPage: "about" }));
+    setRendered(true);
+    return () => setRendered(false);
+  }, []);
+
   //
   useEffect(() => {
     setMySkills(skills);
@@ -22,11 +43,13 @@ export default function About() {
   }, [info]);
 
   //
+  function downloadFile() {}
+  //
   return (
-    <section className="section about">
+    <section className={`${isFullScreen && "full"} section about`}>
       <div className="container">
         <div className="row">
-          <div className="section-title pad-15">
+          <div className={`section-title pad-15 ${curTheme}`}>
             <h2> About me</h2>
           </div>
         </div>
@@ -36,7 +59,10 @@ export default function About() {
             <div className="row">
               <div className="about-text pad-15">
                 <h3>
-                  I'm Venktesh and <span>Full Stack Developer [MERN]</span>
+                  I'm Venktesh and i'm a{" "}
+                  <span className={`${curTheme}`}>
+                    Full Stack Developer [MERN]
+                  </span>
                 </h3>
                 <p>
                   Highly motivated and skilled Full Stack Developer seeking an
@@ -58,10 +84,14 @@ export default function About() {
 
                 <div className="row">
                   <div className="buttons pad-15">
-                    <Link to={"#"} className="btn">
+                    <Link
+                      onClick={downloadFile}
+                      className={`btn ${curTheme}`}
+                      style={{ border: "none" }}
+                    >
                       Download CV
                     </Link>
-                    <Link to={"/contact"} className="btn hire-me">
+                    <Link to={"/contact"} className={`btn ${curTheme} hire-me`}>
                       Hire me
                     </Link>
                   </div>

@@ -1,0 +1,139 @@
+.contact {
+  overflow: scroll;
+}
+.contact-title {
+  color: var(--skin-color);
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+.contact-sub-title {
+  color: var(--text-black-900);
+  text-align: center;
+  font-size: 15px;
+  margin-bottom: 60px;
+}
+
+.contact .contact-info-item {
+  flex: 0 0 25%;
+  max-width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 60px;
+  margin-left: 3%;
+  margin: auto;
+}
+
+@media (max-width: 991px) {
+  .contact-info-item {
+    flex: 0 0 50%;
+    min-width: 50%;
+  }
+}
+
+@media (max-width: 700px) {
+  .contact-info-item {
+    flex: 0 0 80%;
+    min-width: 80%;
+    margin: auto;
+  }
+}
+
+.contact .contact-info-item svg,
+img {
+  display: block;
+}
+
+.contact .contact-info-item .icon svg,
+img {
+  font-size: 25px;
+  color: var(--skin-color);
+}
+
+.contact .contact-info-item h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-black-900);
+  text-transform: capitalize;
+  margin: 15px 0px 5px;
+}
+
+.contact .contact-info-item p {
+  font-size: 16px;
+  line-height: 25px;
+  color: var(--text-black-700);
+  font-weight: 400;
+}
+
+.contact .contact-form {
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding: 20px;
+  border: solid 1px var(--text-black-700);
+  border-radius: 20px;
+}
+
+.contact-form .col-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.contact-form .col-12 {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.contact-form .form-item {
+  margin-bottom: 30px;
+}
+
+.contact-form .form-item .form-control {
+  width: 100%;
+  background-color: green;
+  height: 50px;
+  border-radius: 25px;
+  background-color: var(--bg-black-100);
+  border: 1px solid var(--text-black-50);
+  padding: 10px 25px;
+  font-size: 15px;
+  color: var(--text-black-700);
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  box-shadow: 0 0 20px rgba(48, 46, 77, 0.25);
+}
+
+.contact-form .form-item textarea.form-control {
+  height: 140px;
+}
+
+.contact-form .contact-form .btn {
+  height: 50px;
+  padding: 0px 50px;
+}
+
+/* theme 1 */
+
+.contact .contact-title.color-1 {
+  color: var(--color-1) !important;
+}
+
+/* theme 2 */
+
+.contact .contact-title.color-2 {
+  color: var(--color-2) !important;
+}
+
+/* theme 3 */
+
+.contact .contact-title.color-3 {
+  color: var(--color-3) !important;
+}
+
+/* theme 4 */
+
+.contact .contact-title.color-4 {
+  color: var(--color-4) !important;
+}

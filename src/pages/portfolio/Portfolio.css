@@ -2,6 +2,10 @@
   padding-bottom: 40px;
 }
 
+.portfolio {
+  overflow: scroll;
+}
+
 .portfolio .portfolio-heading {
   flex: 0 0 100%;
   max-width: 100%;
@@ -16,4 +20,28 @@
 .portfolio h2 {
   color: var(--text-black-900);
   font-family: "Poppins", sans-serif;
+}
+
+/* theme 1 */
+
+.portfolio-heading.color-1 h2 {
+  color: var(--color-1) !important;
+}
+
+/* theme 2 */
+
+.portfolio-heading.color-2 h2 {
+  color: var(--color-2) !important;
+}
+
+/* theme 3 */
+
+.portfolio-heading.color-3 h2 {
+  color: var(--color-13) !important;
+}
+
+/* theme 4 */
+
+.portfolio-heading.color-4 h2 {
+  color: var(--color-4) !important;
 }

@@ -1,18 +1,59 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import profile_img from "../../imgs/profile.jpg";
 import "./home.css";
 import { Link } from "react-router-dom";
+import { TypeAnimation } from "react-type-animation";
+import { actions, stateSelector } from "../../redux/slice";
+import { useDispatch, useSelector } from "react-redux";
+
+//
 export default function Home() {
+  //
+  const {
+    theme: { theme: curTheme },
+    isFullScreen,
+  } = useSelector(stateSelector);
+
+  //
+  const dispatch = useDispatch();
+  const [render, setRender] = useState(false);
+
+  useEffect(() => {
+    dispatch(actions.setPage({ curPage: "home" }));
+    setRender(true);
+    return () => setRender(false);
+  }, []);
+
+  //
   return (
-    <section className="home section">
+    <section className={`${isFullScreen && "full"} home section`}>
       <div className="container">
         <div className="row">
           <div className="home-info pad-15">
             <h3 className="hello">
-              Hello, my name is <span className="name">Venktesh T</span>
+              Hello, my name is{" "}
+              <span className={`${curTheme} name`}>Venktesh T</span>
             </h3>
             <h3 className="my-profession">
-              I'm a <span className="typing">Fullstack Developer</span>
+              I'm a{" "}
+              <span className={`${curTheme} typing`}>
+                <TypeAnimation
+                  sequence={[
+                    "Fullstack Developer",
+                    1000,
+                    "MERN stack Developer",
+                    1000,
+                    "Frontend Developer",
+                    1000,
+                    "Backend Developer",
+                  ]}
+                  wrapper="span"
+                  speed={10}
+                  deletionSpeed={10}
+                  style={{ fontSize: "30px" }}
+                  repeat={Infinity}
+                />
+              </span>
             </h3>
             <p>
               Highly motivated and skilled Full Stack Developer seeking an
@@ -21,11 +62,11 @@ export default function Home() {
               dynamic team and gain practical experience in creating innovative
               and user-friendly web applications
             </p>
-            <Link to={"/contact"} className="btn hire-me">
+            <Link to={"/contact"} className={`btn ${curTheme} hire-me`}>
               Hire me
             </Link>
           </div>
-          <div className="home-img">
+          <div className={`home-img ${curTheme}`}>
             <img src={profile_img} alt="profile-img" />
           </div>
         </div>

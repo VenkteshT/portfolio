@@ -2,12 +2,20 @@ import {
   faLaptopCode,
   faCloudUploadAlt,
   faCode,
+  faMobile,
+  faEnvelope,
+  faHome,
 } from "@fortawesome/free-solid-svg-icons";
 
 import amazon from "./imgs/amazon.png";
 import netflix from "./imgs/netflix.png";
 import ers from "./imgs/ers.png";
 import ht from "./imgs/ht.png";
+
+import dsa from "./imgs/DSA.png";
+import frontend from "./imgs/Frontend.png";
+import backend from "./imgs/Backend.png";
+import react from "./imgs/React.png";
 
 const info = [
   { key: "Name", val: "Venktesh M T" },
@@ -73,6 +81,10 @@ const skills = [
     name: "Java",
     img: "https://w7.pngwing.com/pngs/578/816/png-transparent-java-class-file-java-platform-standard-edition-java-development-kit-java-runtime-environment-coffee-jar-text-class-orange-thumbnail.png",
   },
+  {
+    name: "...in Progress",
+    img: "https://png.pngtree.com/png-vector/20220913/ourmid/pngtree-work-in-progress-png-image_6173846.png",
+  },
 ];
 
 const services = [
@@ -120,4 +132,53 @@ const projects = [
   },
 ];
 
-export { skills, info, education, services, projects };
+const contactInfo = [
+  {
+    key: "Call Me On",
+    val: "8073397359",
+    icon: faMobile,
+  },
+  {
+    key: "Email",
+    val: "venkteshmt10@gmail.com",
+    icon: faEnvelope,
+  },
+  {
+    key: "Linked-in",
+    val: "https://www.linkedin.com/in/venktesh-t-b34b78218",
+    icon: faHome,
+  },
+];
+
+const myCirtificates = [
+  {
+    name: "Frontend",
+    img: frontend,
+    link: "https://certificate.codingninjas.com/view/1bb8a2c3666c32ab",
+  },
+  {
+    name: "Backend",
+    img: backend,
+    link: "https://certificate.codingninjas.com/view/119364da52795ef4",
+  },
+  {
+    name: "React",
+    img: react,
+    link: "https://certificate.codingninjas.com/view/2c10e80fc38b2a2e",
+  },
+  {
+    name: "DSA",
+    img: dsa,
+    link: "https://certificate.codingninjas.com/view/aee2f13693f93ba2",
+  },
+];
+
+export {
+  skills,
+  info,
+  education,
+  services,
+  projects,
+  contactInfo,
+  myCirtificates,
+};

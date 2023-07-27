@@ -12,6 +12,10 @@
   justify-content: center;
   align-items: center;
   font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 1212px) {
 }
 
 ul li {
@@ -38,6 +42,7 @@ ul li {
 .aside .logo a span {
   font-family: "Clicker Script", cursive;
   font-size: 40px;
+  color: var(--skin-color);
 }
 
 .aside .logo a::before {
@@ -67,17 +72,20 @@ ul li {
   width: 45px;
   border: 1px solid var(--bg-black-50);
   position: fixed;
-  left: 300px;
+  left: 10px;
+  top: 6px !important;
   top: 20px;
   border-radius: 5px;
   background-color: var(--bg-black-100);
-  display: none;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
+}
+
+.nav-toggler:hover {
+  cursor: pointer;
 }
 
 .aside .nav-toggler span {
-  height: 2px;
+  height: 2.5px;
   width: 18px;
   background-color: var(--skin-color);
   display: inline-block;
@@ -86,7 +94,7 @@ ul li {
 
 .aside .nav-toggler span::before {
   content: "";
-  height: 2px;
+  height: 3px;
   width: 18px;
   background-color: var(--skin-color);
   position: absolute;
@@ -96,7 +104,7 @@ ul li {
 
 .aside .nav-toggler span::after {
   content: "";
-  height: 2px;
+  height: 3px;
   width: 18px;
   background-color: var(--skin-color);
   position: absolute;
@@ -124,4 +132,103 @@ ul li {
 
 .aside .nav li a svg {
   margin-right: 15px;
+}
+
+/* theme 1  */
+
+.aside .logo a.color-1::after,
+.aside .logo a.color-1::before {
+  border-color: var(--color-1) !important;
+}
+
+.aside .logo a.color-1 span {
+  color: var(--color-1) !important;
+}
+
+.aside .logo a span.color-1 {
+  color: var(--color-1) !important;
+}
+
+.active.color-1 {
+  color: var(--color-1) !important;
+}
+
+.nav-toggler span.color-1::after,
+.nav-toggler span.color-1::before,
+.nav-toggler span.color-1 {
+  background-color: var(--color-1) !important;
+}
+
+/* theme 2 */
+
+.aside .logo a.color-2::after,
+.aside .logo a.color-2::before {
+  border-color: var(--color-2) !important;
+}
+
+.aside .logo a.color-2 span {
+  color: var(--color-2) !important;
+}
+
+.aside .logo a span.color-2 {
+  color: var(--color-2) !important;
+}
+
+.active.color-2 {
+  color: var(--color-2) !important;
+}
+
+.nav-toggler span.color-2::after,
+.nav-toggler span.color-2::before,
+.nav-toggler span.color-2 {
+  background-color: var(--color-2) !important;
+}
+
+/* theme 3 */
+
+.aside .logo a.color-3::after,
+.aside .logo a.color-3::before {
+  border-color: var(--color-3) !important;
+}
+
+.aside .logo a.color-3 span {
+  color: var(--color-3) !important;
+}
+
+.aside .logo a span.color-3 {
+  color: var(--color-3) !important;
+}
+
+.active.color-3 {
+  color: var(--color-3) !important;
+}
+
+.nav-toggler span.color-3::after,
+.nav-toggler span.color-3::before,
+.nav-toggler span.color-3 {
+  background-color: var(--color-3) !important;
+}
+
+/* theme 4  */
+
+.aside .logo a.color-4::after,
+.aside .logo a.color-4::before {
+  border-color: var(--color-4) !important;
+}
+
+.aside .logo a.color-4 span {
+  color: var(--color-4) !important;
+}
+
+.aside .logo a span.color-4 {
+  color: var(--color-4) !important;
+}
+
+.active.color-4 {
+  color: var(--color-4) !important;
+}
+.nav-toggler span.color-4::after,
+.nav-toggler span.color-4::before,
+.nav-toggler span.color-4 {
+  background-color: var(--color-4) !important;
 }

@@ -2,8 +2,21 @@ import React, { useEffect, useState } from "react";
 import "./Service.css";
 import Service_Item from "../../compnents/serviceItem/Service_Item";
 import { services } from "../../mydata";
-
+import { useDispatch, useSelector } from "react-redux";
+import { actions, stateSelector } from "../../redux/slice";
 export default function Service() {
+  //
+  const dispatch = useDispatch();
+
+  //
+  const {
+    isFullScreen,
+    theme: { theme: curTheme },
+  } = useSelector(stateSelector);
+  //
+  useEffect(() => {
+    dispatch(actions.setPage({ curPage: "services" }));
+  }, []);
   //
   const [myServices, setMyServices] = useState([]);
 
@@ -14,10 +27,10 @@ export default function Service() {
 
   //
   return (
-    <section className="section service">
+    <section className={`${isFullScreen && "full"} section service`}>
       <div className="container">
         <div className="row">
-          <div className="section-title pad-15">
+          <div className={`section-title ${curTheme} pad-15`}>
             <h2>Services</h2>
           </div>
           {myServices.map((el, i) => (

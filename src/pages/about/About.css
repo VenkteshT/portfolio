@@ -1,3 +1,7 @@
+.about {
+  overflow: scroll;
+}
+
 .section .container {
   padding-top: 60px;
   padding-bottom: 70px;
@@ -132,4 +136,89 @@ h3 {
   border: 1px solid var(--bg-black-50);
   width: 100%;
   position: relative;
+}
+/* media query */
+
+@media (max-width: 898px) {
+  .skills {
+    flex: 0 0 100%;
+    min-width: 100%;
+  }
+  .skills img {
+    height: 80% !important;
+  }
+}
+
+@media (max-width: 801px) {
+  .personal-info {
+    flex: 0 0 100%;
+    min-width: 100%;
+  }
+  .skills {
+    flex: 0 0 100%;
+    max-width: 50%;
+  }
+  .education {
+    flex: 0 0 100%;
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .education {
+    flex: 0 0 100% !important;
+    min-width: 100%;
+  }
+  .timeline-item {
+    flex: 0 0 100% !important;
+    min-width: 100%;
+  }
+  .info-item {
+    flex: 0 0 100% !important;
+    min-width: 90%;
+  }
+}
+
+/* theme 1 */
+
+.about-text span.color-1 {
+  color: var(--color-1) !important;
+}
+
+.section-title.color-1 h2::after,
+.section-title.color-1 h2::before {
+  background: var(--color-1) !important;
+}
+
+/* theme 2 */
+
+.about-text span.color-2 {
+  color: var(--color-2) !important;
+}
+
+.section-title.color-2 h2::after,
+.section-title.color-2 h2::before {
+  background: var(--color-2) !important;
+}
+
+/* theme 3 */
+
+.about-text span.color-3 {
+  color: var(--color-3) !important;
+}
+
+.section-title.color-3 h2::after,
+.section-title.color-3 h2::before {
+  background: var(--color-3) !important;
+}
+
+/* theme 4 */
+
+.about-text span.color-4 {
+  color: var(--color-4) !important;
+}
+
+.section-title.color-4 h2::after,
+.section-title.color-4 h2::before {
+  background: var(--color-4) !important;
 }
