@@ -40,16 +40,17 @@ export default function Home() {
                 <TypeAnimation
                   sequence={[
                     "Fullstack Developer",
-                    1000,
+                    1500,
                     "MERN stack Developer",
-                    1000,
+                    1500,
                     "Frontend Developer",
-                    1000,
+                    1500,
                     "Backend Developer",
+                    1500,
                   ]}
                   wrapper="span"
-                  speed={10}
-                  deletionSpeed={10}
+                  speed={2}
+                  deletionSpeed={2}
                   style={{ fontSize: "30px" }}
                   repeat={Infinity}
                 />

@@ -1,17 +1,18 @@
 .style-switcher {
   position: fixed;
   z-index: 20;
-  right: -200px;
+  right: -220px;
   top: 60px;
-  width: 200px;
+  width: 220px;
   height: 40px;
-  border: solid 1px var(--bg-black-50);
+  border: solid 2px var(--bg-black-50);
   background-color: var(--bg-black-100);
-  border-radius: 5px;
+  border-radius: 15px;
   transition: all 0.3s ease;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 20px;
 }
 
 .style-switcher .s-icon {
@@ -52,10 +53,12 @@
   margin: auto 5px;
   content: "";
   border-radius: 50%;
+  transition: all 0.3s ease;
 }
 
 .style-switcher .colors span:hover {
   cursor: pointer;
+  transform: scale(1.08);
 }
 
 .style-switcher .style-switcher-toggler {

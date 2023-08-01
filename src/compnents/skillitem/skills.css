@@ -30,6 +30,7 @@
 @media (max-width: 861px) {
   .skill-item img {
     height: 90%;
+    max-width: 70px;
   }
 }
 

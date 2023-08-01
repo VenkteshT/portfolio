@@ -3,7 +3,7 @@ import "./contactitem.css";
 import { useSelector } from "react-redux";
 import { stateSelector } from "../../redux/slice";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-export default function Contact_item({ icon, _key, val, img }) {
+export default function Contact_item({ icon, _key, val, img, link }) {
   //
   const {
     theme: { theme: curTheme },
@@ -11,11 +11,17 @@ export default function Contact_item({ icon, _key, val, img }) {
   //
   return (
     <div className="contact-info-item pad-15">
-      <div className={`icon ${curTheme}`}>
+      <a href={link ? link : ""} className={`icon ${curTheme}`}>
         <FontAwesomeIcon icon={icon} />
-      </div>
+      </a>
       <h4>{_key}</h4>
-      <p>{val}</p>
+      {link ? (
+        <a href={link} target="new">
+          {val}
+        </a>
+      ) : (
+        <p>{val}</p>
+      )}
     </div>
   );
 }

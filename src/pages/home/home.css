@@ -87,6 +87,19 @@ h3.my-profession {
   color: var(--text-black-700);
 }
 
+@media (max-width: 500px) {
+  .home-info p {
+    min-width: 70vw;
+    margin-top: 15px;
+  }
+  .my-profession {
+    height: 100px;
+    margin-bottom: 10px;
+    /* background-color: red; */
+    min-width: 70vw;
+  }
+}
+
 .home .home-img {
   flex: 0 0 40%;
   max-width: 40%;

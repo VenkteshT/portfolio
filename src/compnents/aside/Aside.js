@@ -19,6 +19,14 @@ export default function Aside() {
     theme: { theme: curTheme },
   } = useSelector(stateSelector);
   const [open, setOpen] = useState(true);
+
+  useEffect(() => {
+    if (window.innerWidth < 1000) {
+      setOpen(false);
+      dispatch(actions.setFullScreen({ val: true }));
+    }
+  }, []);
+
   //
   const dispatch = useDispatch();
   //
@@ -84,7 +92,7 @@ export default function Aside() {
             onClick={handleLinkClick}
           >
             <FontAwesomeIcon icon={faBook} />
-            Cirtificates
+            Certificates
           </Link>
         </li>
         <li>

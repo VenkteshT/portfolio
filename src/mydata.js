@@ -7,11 +7,24 @@ import {
   faHome,
 } from "@fortawesome/free-solid-svg-icons";
 
+import pJs from "./imgs/programming_languages/js.png";
+import pCss from "./imgs/programming_languages/css.png";
+import pJava from "./imgs/programming_languages/java.png";
+import pHtml from "./imgs/programming_languages/html.png";
+import pNode from "./imgs/programming_languages/node.png";
+import pReact from "./imgs/programming_languages/react.png";
+import pMongo from "./imgs/programming_languages/mongo.png";
+import pExpress from "./imgs/programming_languages/express.png";
+import pGithub from "./imgs/programming_languages/github.png";
+import pTs from "./imgs/programming_languages/ts.png";
+
+// projects
 import amazon from "./imgs/amazon.png";
 import netflix from "./imgs/netflix.png";
 import ers from "./imgs/ers.png";
 import ht from "./imgs/ht.png";
 
+// certificates
 import dsa from "./imgs/DSA.png";
 import frontend from "./imgs/Frontend.png";
 import backend from "./imgs/Backend.png";
@@ -50,40 +63,40 @@ const education = [
 const skills = [
   {
     name: "Javascript",
-    img: "https://e7.pngegg.com/pngimages/725/775/png-clipart-javascript-html-logo-blog-css3-javanese-miscellaneous-angle-thumbnail.png",
+    img: pJs,
   },
   {
     name: "HTML",
-    img: "https://w7.pngwing.com/pngs/840/443/png-transparent-html-5-logo-web-development-html-css3-canvas-element-web-design-w3c-html5-logo-miscellaneous-text-orange-thumbnail.png",
+    img: pHtml,
   },
-  { name: "CSS", img: "https://cdn-icons-png.flaticon.com/512/919/919826.png" },
+  { name: "CSS", img: pCss },
   {
     name: "React",
-    img: "https://w7.pngwing.com/pngs/403/269/png-transparent-react-react-native-logos-brands-in-colors-icon-thumbnail.png",
+    img: pReact,
   },
   {
     name: "Node.js",
-    img: "https://w7.pngwing.com/pngs/452/24/png-transparent-js-logo-node-logos-and-brands-icon-thumbnail.png",
+    img: pNode,
   },
   {
     name: "Express.js",
-    img: "https://www.pngfind.com/pngs/m/136-1363736_express-js-icon-png-transparent-png.png",
+    img: pExpress,
   },
   {
     name: "MongoDB",
-    img: "https://www.pngall.com/wp-content/uploads/13/Mongodb-Transparent.png",
+    img: pMongo,
   },
   {
     name: "Github",
-    img: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+    img: pGithub,
   },
   {
     name: "Java",
-    img: "https://w7.pngwing.com/pngs/578/816/png-transparent-java-class-file-java-platform-standard-edition-java-development-kit-java-runtime-environment-coffee-jar-text-class-orange-thumbnail.png",
+    img: pJava,
   },
   {
-    name: "...in Progress",
-    img: "https://png.pngtree.com/png-vector/20220913/ourmid/pngtree-work-in-progress-png-image_6173846.png",
+    name: "... soon",
+    img: pTs,
   },
 ];
 
@@ -91,17 +104,17 @@ const services = [
   {
     png: faLaptopCode,
     title: "Web Development",
-    info: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum ab sunt sint eius possimus, enim ex laudantium fuga ad! Qui?`,
+    info: `web development service tailored to your needs.`,
   },
   {
     png: faCode,
     title: "Frontend Development",
-    info: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex aspernatur, qui quae maiores quis voluptatibus quas itaque eius ipsum? Animi!`,
+    info: `skillfull frontend development for captivating user experiences.`,
   },
   {
     png: faCloudUploadAlt,
     title: "Backend Development",
-    info: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex aspernatur, qui quae maiores quis voluptatibus quas itaque eius ipsum? Animi!`,
+    info: `backend development to power your web applications.`,
   },
 ];
 
@@ -145,7 +158,8 @@ const contactInfo = [
   },
   {
     key: "Linked-in",
-    val: "https://www.linkedin.com/in/venktesh-t-b34b78218",
+    val: "Venktesh T",
+    link: "https://www.linkedin.com/in/venktesh-t-b34b78218",
     icon: faHome,
   },
 ];
