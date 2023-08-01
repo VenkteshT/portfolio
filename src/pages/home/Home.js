@@ -18,6 +18,7 @@ export default function Home() {
   const dispatch = useDispatch();
   const [render, setRender] = useState(false);
 
+  //
   useEffect(() => {
     dispatch(actions.setPage({ curPage: "home" }));
     setRender(true);

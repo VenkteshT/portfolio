@@ -12,14 +12,25 @@ import {
 import { Link } from "react-router-dom";
 import { actions, stateSelector } from "../../redux/slice";
 import { useSelector, useDispatch } from "react-redux";
+
+//
 export default function Aside() {
+  //
+  const dispatch = useDispatch();
+
   //
   const {
     page,
     theme: { theme: curTheme },
   } = useSelector(stateSelector);
+
+  //
   const [open, setOpen] = useState(true);
 
+  //
+  const [visible, setVisible] = useState(true);
+
+  // for moblie and table rendering the nav should be hidden initially
   useEffect(() => {
     if (window.innerWidth < 1000) {
       setOpen(false);
@@ -28,8 +39,6 @@ export default function Aside() {
   }, []);
 
   //
-  const dispatch = useDispatch();
-  //
   function handleClick() {
     setOpen((p) => !p);
     dispatch(actions.setFullScreen({ val: open }));
@@ -37,6 +46,7 @@ export default function Aside() {
   //
   useEffect(() => {
     window.addEventListener("resize", () => {
+      setVisible(window.innerHeight > 580);
       if (!open) return;
       if (window.innerWidth < 1212) {
         setOpen(false);
@@ -56,11 +66,13 @@ export default function Aside() {
   //
   return (
     <div className={`${!open && "close"} aside`}>
-      <div className="logo" style={{ marginTop: "30px" }}>
-        <Link to="#" className={`${curTheme}`}>
-          <span>N</span>amaste
-        </Link>
-      </div>
+      {visible && (
+        <div className="logo" style={{ marginTop: "30px" }}>
+          <Link to="#" className={`${curTheme}`}>
+            <span>N</span>amaste
+          </Link>
+        </div>
+      )}
       <div className={`nav-toggler`} onClick={handleClick}>
         <span className={`${curTheme}`}></span>
       </div>

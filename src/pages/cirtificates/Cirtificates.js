@@ -31,14 +31,14 @@ export default function Cirtificates() {
         </div>
 
         {Cirtificates.map((item, i) => (
-          <>
+          <React.Fragment key={i}>
             <h2>{item.name}</h2>
             <Cirtificate_Item
               img={item.img}
               link={item.link}
               title={item.name}
             />
-          </>
+          </React.Fragment>
         ))}
       </div>
     </section>
