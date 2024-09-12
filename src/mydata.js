@@ -129,7 +129,7 @@ const projects = [
     title: "netflix-clone",
     type: "Frontend",
     img: netflix,
-    link: "https://netflix-clone-by-venktesh.netlify.app/",
+    link: "https://github.com/VenkteshT/netflix-clone",
   },
   {
     title: "Habit-tracker",

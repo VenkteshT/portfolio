@@ -113,6 +113,9 @@ h3.my-profession {
   .home-img {
     display: none;
   }
+  .about-me {
+    min-width: 150%;
+  }
 }
 
 .home-img::after {

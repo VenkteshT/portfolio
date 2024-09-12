@@ -57,12 +57,18 @@ export default function Home() {
                 />
               </span>
             </h3>
-            <p>
-              Highly motivated and skilled Full Stack Developer seeking an
-              entry-level position to leverage my technical expertise and
-              passion for software development. I am eager to contribute to a
-              dynamic team and gain practical experience in creating innovative
-              and user-friendly web applications
+            <p className="about-me">
+              I'm a React developer who's had a pretty interesting journey so
+              far! I started my career at Wipro, where I tackled UI issues and
+              discovered the joy (and frustration) of bug hunting. But I wanted
+              more excitement, so I joined Hirehunch—a place where interviews
+              get a little smarter, thanks to features like the "link question"
+              tool I built to help companies pick the right questions for
+              candidates. I also created company and user settings pages, making
+              life easier for everyone involved, and helped streamline the
+              interview process so candidates could breeze through multiple
+              rounds. Now, with my toolbox full of React tricks, I’m ready to
+              bring some fresh ideas to my next adventure!
             </p>
             <Link to={"/contact"} className={`btn ${curTheme} hire-me`}>
               Hire me

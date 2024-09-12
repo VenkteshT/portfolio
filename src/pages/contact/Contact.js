@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import "./contact.css";
+import "./Contact.css";
 
 import { useDispatch, useSelector } from "react-redux";
 import { actions, stateSelector } from "../../redux/slice";
