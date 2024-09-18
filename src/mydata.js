@@ -20,7 +20,7 @@ import pTs from "./imgs/programming_languages/ts.png";
 
 // projects
 import amazon from "./imgs/amazon.png";
-import netflix from "./imgs/netflix.png";
+import disney from "./imgs/disney.png";
 import ers from "./imgs/ers.png";
 import ht from "./imgs/ht.png";
 
@@ -126,10 +126,10 @@ const projects = [
     link: "https://mellifluous-brioche-84f36f.netlify.app/",
   },
   {
-    title: "netflix-clone",
+    title: "disney-hotstar-clone",
     type: "Frontend",
-    img: netflix,
-    link: "https://github.com/VenkteshT/netflix-clone",
+    img: disney,
+    link: "https://willowy-tarsier-88a488.netlify.app",
   },
   {
     title: "Habit-tracker",
